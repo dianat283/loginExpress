@@ -46,8 +46,8 @@ app.get('/login',async (req, res) => { //req = request, peticion; res = response
     }
 });
 
-// crear un usuario
-app.post('/login', (req, res) => {
+// crar un usuario
+app.post('/login', async (req, res) => {
   console.log(req.body); // Verifica qué datos llegan realmente
   if (!req.body.usuario || !req.body.contraseña) {
       return res.status(400).json({ error: "Faltan datos en el cuerpo de la solicitud" });
@@ -55,6 +55,16 @@ app.post('/login', (req, res) => {
 
   const { usuario, contraseña } = req.body;
   res.status(200).json({ mensaje: "Datos recibidos correctamente" });
+
+  try {
+    await connection.query(
+        "INSERT INTO usuarios (ID, usuario, contraseña) VALUES (NULL, ?, ?)", [usuario, contraseña]
+    );
+    res.json({ mensaje: 'Usuario Creado exitosamente' });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Error en el servidor');
+  }
 });
 
 app.get('/validar', (req, res) => {
