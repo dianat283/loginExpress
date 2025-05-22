@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: #f4f4f4;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.servicios {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.service {
+    text-align: center;
+    margin: 15px;
+}
+
+.service img {
+    width: 100px;
+}
+
+#cotizacion {
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+input, select {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.contenedor {
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Espaciado uniforme */
+    align-items: flex-start; /* Alinea desde la parte superior */
+}
+
+#cotizacion, .acceso {
+    flex: 1; /* Ambas ocupan el mismo espacio */
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.pie {
+    flex: 1; /* Ambas ocupan el mismo espacio */
+    padding: 20px;
+    border: 1px solid #ccc;
+}

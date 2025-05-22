@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro Vehicular</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Seguros Vehiculares</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor">
+        <section id="cotizacion">
+            <h2>Cotiza tu vehiculo</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="vehiculo">Tipo de Vehículo:</label>
+                <select id="vehiculo">
+                    <option>Auto</option>
+                    <option>Moto</option>
+                    <option>Camión</option>
+                </select>
+
+                <button type="submit" class="btn">Enviar</button>
+                <button id="btn-cotizar">Cotizar Vehiculo</button>
+                <script src="script.js"></script>
+            </form>
+        </section>
+            <section id="cotizacion">
+            <h2>Aqui puedes enviar los datos para que un asesor se contacte contigo para iniciar el proceso de aseguramiento de tu vehiculo<</h2>
+        </section>
+    </div>
+
+    <section id="acceso">
+        <h2>Acceso</h2>
+        <form>
+            <label for="Usuario">Usuario:</label>
+            <input type="text" id="Usuario" required>
+
+            <label for="Contraseña">Contraseña:</label>
+            <input type="text" id="Contraseña" required>
+
+            <button onclick="window.location.href='perfil.html'" type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <section id="contacto">
+        <h2>Teléfono: 123-456-789</h2>
+        <h2>Contacto: ServicioalCliente@CMCSoluciones.com</h2>
+        <h2>Teléfono: 123-456-789</h2>
+    </section>
+
+    <footer id="pie"> 
+        <p>&copy; CMC Aseguradora </p>
+    </footer>
+</body>
+</html>

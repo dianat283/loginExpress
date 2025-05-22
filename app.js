@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 const app = express(); // Inicializar la aplicación Express
 const port = 5000; // Definir el puerto en el que se ejecutará el servidor
 
-
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
@@ -140,7 +139,7 @@ res.send('Sesion validada'); // Respuesta de validación exitosa
 });
 
 // Actualizar un usuario
-app.put('/aseguradoras/id', async (req, res) => {
+app.put('/aseguradoras/:id', async (req, res) => {
   const { id } = req.params;
   const { identificacion, razon_social, cobertura} = req.body;
 

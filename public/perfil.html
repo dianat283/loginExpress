@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Aseguradora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil de Aseguradora</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="aseguradora-info">
+        <h2>Información de la Aseguradora</h2>
+        <div id="listaAseguradoras"></div>
+    </section>
+
+    <form id="aseguradoraForm">
+        <label for="identificacion">Identificación:</label>
+        <input type="text" id="identificacion" required>
+
+        <label for="razon_social">Razón Social:</label>
+        <input type="text" id="razon_social" required>
+
+        <label for="cobertura">Cobertura:</label>
+        <select id="cobertura" required>
+            <option value="1">Auto</option>
+            <option value="2">Moto</option>
+            <option value="3">Camión</option>
+        </select>
+        <button onclick="crearAseguradora()">Registrar Aseguradora</button>
+    </form>
+
+    <div id="mensaje"></div>
+    <script src="script.js"></script>
+
+    <section id="consulta-aseguradoras">
+        <h2>Consultar Aseguradoras</h2>
+        <button onclick="obtenerAseguradoras()">Consultar Aseguradoras</button>
+        <div id="resultadoConsulta"></div> <!-- Aquí se mostrarán los datos -->
+    </section>
+
+</body>
+</html>
